@@ -27,6 +27,6 @@ final class Semester extends Model
             return Str::endsWith($a->name, '上') ? -1 : 1;
         };
 
-        return self::all()->sort($cmp)->last();
+        return static::all()->sort($cmp)->last();
     }
 }
