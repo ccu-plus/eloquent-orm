@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 final class Semester extends Model
 {
     /**
-     * 取得最新學期 eloquent model.
+     * 取得最新學期 Eloquent Model.
      *
      * @return Semester
      */
