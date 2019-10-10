@@ -19,6 +19,7 @@
     "nesbot/carbon": "^2.25"
   },
   "require-dev": {
+    "orchestra/testbench": "^4.0",
     "phpunit/phpunit": "^8.4"
   },
   "autoload": {
@@ -29,7 +30,10 @@
   "autoload-dev": {
     "psr-4": {
       "CCUPLUS\\EloquentORM\\Tests\\": "tests/"
-    }
+    },
+    "classmap": [
+      "tests/migrations"
+    ]
   },
   "config": {
     "optimize-autoloader": true,
