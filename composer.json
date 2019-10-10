@@ -31,13 +31,6 @@
       "CCUPLUS\\EloquentORM\\Tests\\": "tests/"
     }
   },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "CCUPLUS\\EloquentORM\\ServiceProvider"
-      ]
-    }
-  },
   "config": {
     "optimize-autoloader": true,
     "sort-packages": true
