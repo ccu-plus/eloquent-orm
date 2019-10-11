@@ -11,6 +11,7 @@ use Laravel\Scout\Searchable;
  * @property integer $id
  * @property string $code
  * @property string $name
+ * @property integer $credit
  * @property integer $department_id
  * @property integer $dimension_id
  * @property Collection|Comment[] $comments
