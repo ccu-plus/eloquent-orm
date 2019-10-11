@@ -24,6 +24,13 @@ final class Course extends Model
     use Searchable;
 
     /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
      * 課程評論.
      *
      * @return BelongsToMany

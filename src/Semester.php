@@ -12,6 +12,13 @@ use Illuminate\Support\Str;
 final class Semester extends Model
 {
     /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
      * 取得學期數字型態之值.
      *
      * @return string|null
