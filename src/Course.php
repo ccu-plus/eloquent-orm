@@ -70,7 +70,7 @@ final class Course extends Model
     public function professors(): BelongsToMany
     {
         return $this->belongsToMany(Professor::class)
-            ->withPivot('semester_id', 'class', 'credit');
+            ->withPivot('semester_id');
     }
 
     /**
