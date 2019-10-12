@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer $comment_id
  * @property string $content
  * @property boolean $anonymous
- * @property integer $likes
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property Carbon|null $deleted_at
@@ -31,7 +30,6 @@ final class Comment extends Model
         'user_id' => 'integer',
         'comment_id' => 'integer',
         'anonymous' => 'boolean',
-        'likes' => 'integer',
     ];
 
     /**
