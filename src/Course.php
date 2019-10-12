@@ -38,8 +38,7 @@ final class Course extends Model
      */
     public function comments(): BelongsToMany
     {
-        return $this->belongsToMany(Comment::class, 'course_comment')
-            ->withPivot('professor_id');
+        return $this->belongsToMany(Comment::class, 'course_comment');
     }
 
     /**
