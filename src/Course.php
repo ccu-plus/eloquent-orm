@@ -5,12 +5,15 @@ namespace CCUPLUS\EloquentORM;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Scout\Searchable;
 
 /**
  * @property integer $id
  * @property string $code
  * @property string $name
+ * @property string|null $name_en
+ * @property string|null $name_pinyin
  * @property integer $credit
  * @property integer $department_id
  * @property integer $dimension_id
@@ -34,11 +37,11 @@ final class Course extends Model
     /**
      * 課程評論.
      *
-     * @return BelongsToMany
+     * @return HasMany
      */
-    public function comments(): BelongsToMany
+    public function comments(): HasMany
     {
-        return $this->belongsToMany(Comment::class, 'course_comment');
+        return $this->hasMany(Comment::class);
     }
 
     /**

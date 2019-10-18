@@ -11,13 +11,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @property integer $id
  * @property integer $user_id
- * @property integer $comment_id
- * @property integer $professor_id
+ * @property integer|null $course_id
+ * @property integer|null $comment_id
+ * @property integer|null $professor_id
  * @property string $content
  * @property boolean $anonymous
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * @property Carbon|null $deleted_at
+ * @property Course $course
  * @property User $user
  * @property Professor $professor
  * @property Collection|Comment[] $comments
@@ -43,6 +45,16 @@ final class Comment extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    /**
+     * 此評論所屬課程.
+     *
+     * @return BelongsTo
+     */
+    public function course(): BelongsTo
+    {
+        return $this->belongsTo(Course::class);
+    }
 
     /**
      * 此評論所屬使用者.

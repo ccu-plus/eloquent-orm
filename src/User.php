@@ -10,7 +10,7 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
  * @property integer $id
  * @property string $username
  * @property string $nickname
- * @property string $email
+ * @property string|null $email
  * @property string $token
  * @property string $api_token
  * @property Carbon|null $verified_at

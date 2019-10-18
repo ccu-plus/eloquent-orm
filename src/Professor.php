@@ -5,6 +5,7 @@ namespace CCUPLUS\EloquentORM;
 /**
  * @property integer $id
  * @property string $name
+ * @property string|null $name_pinyin
  */
 final class Professor extends Model
 {
