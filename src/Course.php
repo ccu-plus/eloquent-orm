@@ -95,10 +95,13 @@ final class Course extends Model
         return [
             'code' => $this->code,
             'name' => $this->name,
+            'name_en' => $this->name_en,
+            'name_pinyin' => $this->name_pinyin,
             'college' => $this->department->college,
             'department' => $this->department->name,
             'dimension' => optional($this->dimension)->name,
             'professors' => $this->professors->pluck('name')->unique()->values()->toArray(),
+            'professors_pinyin' => $this->professors->pluck('name_pinyin')->unique()->values()->toArray(),
         ];
     }
 }
