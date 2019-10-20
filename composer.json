@@ -2,7 +2,8 @@
   "name": "ccu-plus/eloquent-orm",
   "description": "Eloquent ORM for CCU PLUS API Service.",
   "keywords": ["ccu-plus"],
-  "license": "AGPL",
+  "version": "1.0.0",
+  "license": "AGPL-3.0-only",
   "authors": [
     {
       "name": "BePsvPT",
