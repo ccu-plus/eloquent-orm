@@ -4,4 +4,4 @@ Eloquent ORM for CCU PLUS API Service.
 
 # Version
 
-1.0.0
+1.0.1
