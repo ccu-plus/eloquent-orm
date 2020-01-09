@@ -3,7 +3,7 @@
 namespace CCUPLUS\EloquentORM;
 
 /**
- * @property integer $id
+ * @property int $id
  * @property string $college
  * @property string $name
  * @property string $code
