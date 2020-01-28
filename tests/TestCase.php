@@ -13,6 +13,6 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $this->loadMigrationsFrom(__DIR__ . '/migrations/2019_10_10_000000_semesters_table_migration.php');
+        $this->loadMigrationsFrom(__DIR__ . '/migrations');
     }
 }
