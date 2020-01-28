@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php"
-         cacheResult="false"
-         colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         executionOrder="random"
-         processIsolation="true"
-         stopOnError="true"
-         stopOnFailure="true"
+<phpunit
+  bootstrap="vendor/autoload.php"
+  cacheResult="false"
+  colors="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  executionOrder="random"
+  processIsolation="true"
+  stopOnError="true"
+  stopOnFailure="true"
 >
   <testsuites>
     <testsuite name="CCU PLUS Eloquent ORM">
@@ -16,6 +17,7 @@
     </testsuite>
   </testsuites>
   <php>
+    <env name="APP_KEY" value="evTirjNtPEU6bqCRAHWt0xfIkxD8Hr3d"/>
     <env name="DB_CONNECTION" value="testing"/>
   </php>
   <filter>
