@@ -3,6 +3,26 @@ name: Unit Test
 on: [push, pull_request]
 
 jobs:
+  static_analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP, Composer and Extensions
+        uses: shivammathur/setup-php@v1
+        with:
+          php-version: '7.4'
+
+      - name: Install dependencies
+        run: composer install --optimize-autoloader --no-interaction --no-progress --no-suggest
+
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse --verbose
+
+      - name: Run PHP-CS-Fixer
+        run: vendor/bin/php-cs-fixer fix --verbose --dry-run
+
   phpunit:
     runs-on: ${{ matrix.operating-system }}
 
@@ -14,7 +34,7 @@ jobs:
         php-versions: ['7.2', '7.3', '7.4']
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Setup PHP, Composer and Extensions
         uses: shivammathur/setup-php@v1
@@ -23,7 +43,7 @@ jobs:
           extensions: dom, fileinfo, mbstring, sqlite3
 
       - name: Install dependencies
-        run: composer install --optimize-autoloader --prefer-dist --no-interaction --no-progress --no-suggest
+        run: composer install --optimize-autoloader --no-interaction --no-progress --no-suggest
 
-      - name: Run tests
-        run: php vendor/bin/phpunit
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit
