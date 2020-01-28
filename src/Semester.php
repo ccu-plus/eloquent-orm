@@ -5,7 +5,7 @@ namespace CCUPLUS\EloquentORM;
 use Illuminate\Support\Str;
 
 /**
- * @property integer $id
+ * @property int $id
  * @property string $name
  * @property string|null $value
  */
@@ -39,7 +39,7 @@ final class Semester extends Model
     /**
      * 取得最新學期 Eloquent Model.
      *
-     * @return Semester
+     * @return static
      */
     public static function newest(): Semester
     {

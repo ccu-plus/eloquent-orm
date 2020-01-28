@@ -31,7 +31,7 @@ final class Comment extends Model
     /**
      * The attributes that should be cast to native types.
      *
-     * @var array
+     * @var array<string>
      */
     protected $casts = [
         'user_id' => 'integer',
@@ -42,7 +42,7 @@ final class Comment extends Model
     /**
      * The attributes that should be mutated to dates.
      *
-     * @var array
+     * @var array<string>
      */
     protected $dates = ['deleted_at'];
 

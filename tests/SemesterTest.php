@@ -6,7 +6,7 @@ use CCUPLUS\EloquentORM\Semester;
 
 class SemesterTest extends TestCase
 {
-    public function test_value_attribute()
+    public function test_value_attribute(): void
     {
         Semester::query()->insert([
             ['id' => 1, 'name' => '101上'],
@@ -14,11 +14,21 @@ class SemesterTest extends TestCase
         ]);
 
         $this->assertNull((new Semester)->value);
-        $this->assertSame('1011', Semester::query()->find(1)->value);
-        $this->assertSame('1002', Semester::query()->find(2)->value);
+
+        $semester = Semester::query()->find(1);
+
+        $this->assertNotNull($semester);
+
+        $this->assertSame('1011', $semester->value);
+
+        $semester = Semester::query()->find(2);
+
+        $this->assertNotNull($semester);
+
+        $this->assertSame('1002', $semester->value);
     }
 
-    public function test_newest_method()
+    public function test_newest_method(): void
     {
         Semester::query()->insert([
             ['name' => '101上'],

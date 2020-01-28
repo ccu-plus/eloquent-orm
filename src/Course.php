@@ -9,14 +9,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Scout\Searchable;
 
 /**
- * @property integer $id
+ * @property int $id
  * @property string $code
  * @property string $name
  * @property string|null $name_en
  * @property string|null $name_pinyin
- * @property integer $credit
- * @property integer $department_id
- * @property integer $dimension_id
+ * @property int $credit
+ * @property int $department_id
+ * @property int|null $dimension_id
  * @property Collection|Comment[] $comments
  * @property Department $department
  * @property Dimension|null $dimension
@@ -88,7 +88,7 @@ final class Course extends Model
     /**
      * Get the indexable data array for the model.
      *
-     * @return array
+     * @return array<mixed>
      */
     public function toSearchableArray(): array
     {

@@ -7,7 +7,7 @@ use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
 /**
- * @property integer $id
+ * @property int $id
  * @property string $username
  * @property string $nickname
  * @property string|null $email
@@ -24,7 +24,7 @@ final class User extends Model implements AuthenticatableContract
     /**
      * The attributes that should be mutated to dates.
      *
-     * @var array
+     * @var array<string>
      */
     protected $dates = ['verified_at'];
 
