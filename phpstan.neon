@@ -1,0 +1,18 @@
+includes:
+    - vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    level: max
+
+    paths:
+        - %currentWorkingDirectory%/src
+        - %currentWorkingDirectory%/tests
+
+    excludes_analyse:
+        - %currentWorkingDirectory%/src/User.php
+    
+    ignoreErrors:
+        -
+            message: "#^Cannot access property \\$value on CCUPLUS\\\\EloquentORM\\\\Semester\\|\\(Illuminate\\\\Database\\\\Eloquent\\\\Collection\\&iterable<CCUPLUS\\\\EloquentORM\\\\Semester>\\)\\|null\\.$#"
+            count: 2
+            path: tests/SemesterTest.php
